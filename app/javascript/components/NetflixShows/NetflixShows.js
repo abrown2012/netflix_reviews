@@ -7,3 +7,5 @@ const NetflixShows = () => {
         </div>
     )
 }
+
+export default NetflixShows 
