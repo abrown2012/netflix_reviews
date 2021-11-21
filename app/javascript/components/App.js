@@ -8,9 +8,10 @@ import NetflixShows from './NetflixShows/NetflixShows'
 
 const App = () => {
     return (
+        
         <Routes>
             <Route exact path="/" element={<NetflixShows />} />
-            <Route exact path="/netflix_shows/slug" element={<NetflixShow />} />
+            <Route exact path="/netflix_shows" element={<NetflixShow />} />
         </Routes>
     )
 }
