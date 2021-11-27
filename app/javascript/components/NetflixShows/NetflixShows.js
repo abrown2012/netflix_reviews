@@ -2,7 +2,7 @@ import React, {useState, useEffect, Fragment} from 'react'
 import axios from 'axios'
 import { set } from 'lodash'
 import NetflixShow from './NetflixShow'
-import {styled} from 'styled-components'
+import styled from 'styled-components'
 
 
 const Home = styled.div`
@@ -10,15 +10,25 @@ const Home = styled.div`
     max-width:  1200px;
     margin-left: auto;
     margin-left: auto;
-`
+`;
+
 const Header = styled.div`
     padding: 100px 100px 10px 100px;
     h1 {
-        font-size: 42
+        font-size: 42px;
     }
-`
-const Subheader = styled.div``
-const Grid = styled.div``
+`;
+const Subheader = styled.div`
+    font-weight: 330;
+    font-size: 26px;
+`;
+const Grid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+    padding: 20px;
+`;
 
 const NetflixShows = () => {
 
@@ -43,15 +53,15 @@ const NetflixShows = () => {
     return (
         <Fragment>
             <Home>
-                <div className="header">
+                <Header>
                     <h1>Tricky Reviews</h1>
-                    <div className="subheader">Here you can find honest and unbiased show reviews which you won't be able to find on Netflix</div>
-                    <div className='grid'>
+                    <Subheader>Here you can find honest and unbiased show reviews which you won't be able to find on Netflix</Subheader>
+                    <Grid>
                         
                         {grid}
                         
-                    </div>
-                </div>
+                    </Grid>
+                </Header>
             </Home>
         </Fragment>
     )
